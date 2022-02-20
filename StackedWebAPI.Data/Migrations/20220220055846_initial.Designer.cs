@@ -12,14 +12,14 @@ using StackedWebAPI.Data;
 namespace StackedWebAPI.Data.Migrations
 {
     [DbContext(typeof(BlogDbContext))]
-    [Migration("20220220051156_initial")]
+    [Migration("20220220055846_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.0-preview.1.22076.6")
+                .HasAnnotation("ProductVersion", "6.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);

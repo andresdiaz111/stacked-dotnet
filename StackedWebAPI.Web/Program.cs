@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<BlogDbContext>(options =>
 {
     options.EnableDetailedErrors();
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("appDB"));
 
 });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
