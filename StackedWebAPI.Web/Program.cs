@@ -1,8 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using StackedWebAPI.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddDbContext<BlogDbContext>(options =>
+{
+    options.EnableDetailedErrors();
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

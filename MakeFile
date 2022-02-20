@@ -1,0 +1,12 @@
+# Project Variables
+PROJECT_NAME ?= StackedWebAPI
+ORG_NAME ?= StackedWebAPI
+REPO_NAME ?= StackedWebApi
+
+.PHONY: migrations db
+
+migrations:
+	cd ./StackedWebAPI.Data && dotnet ef --startup-project ../StackedWebApi.Web/ migrations add $(mname) && cd ..
+
+db:
+	cd ./StackedWebAPI.Data && dotnet ef --startup-project ../StackedWebApi.Web/ database update && cd ..
