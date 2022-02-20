@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackedWebAPI.Web", "StackedWebAPI.Web\StackedWebAPI.Web.csproj", "{4A6C1A86-9662-4AE7-A644-F1416936E538}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackedWebAPI.Models", "StackedWebAPI.Models\StackedWebAPI.Models.csproj", "{8FE7FBBC-C967-42EF-BEA5-F7093BA9ACD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackedWebAPI.Services", "StackedWebAPI.Services\StackedWebAPI.Services.csproj", "{06233CED-E70C-4EE2-97E8-0365F2E1A2FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackedWebAPI.Data", "StackedWebAPI.Data\StackedWebAPI.Data.csproj", "{BEFF31DD-098F-498F-857D-CE65A093963A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +24,17 @@ Global
 		{4A6C1A86-9662-4AE7-A644-F1416936E538}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A6C1A86-9662-4AE7-A644-F1416936E538}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A6C1A86-9662-4AE7-A644-F1416936E538}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FE7FBBC-C967-42EF-BEA5-F7093BA9ACD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FE7FBBC-C967-42EF-BEA5-F7093BA9ACD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FE7FBBC-C967-42EF-BEA5-F7093BA9ACD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FE7FBBC-C967-42EF-BEA5-F7093BA9ACD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06233CED-E70C-4EE2-97E8-0365F2E1A2FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06233CED-E70C-4EE2-97E8-0365F2E1A2FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06233CED-E70C-4EE2-97E8-0365F2E1A2FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06233CED-E70C-4EE2-97E8-0365F2E1A2FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEFF31DD-098F-498F-857D-CE65A093963A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEFF31DD-098F-498F-857D-CE65A093963A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEFF31DD-098F-498F-857D-CE65A093963A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEFF31DD-098F-498F-857D-CE65A093963A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
