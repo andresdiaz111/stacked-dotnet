@@ -10,4 +10,10 @@
     <ProjectReference Include="..\StackedWebAPI.Data\StackedWebAPI.Data.csproj" />
     <ProjectReference Include="..\StackedWebAPI.Models\StackedWebAPI.Models.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="AutoMapper" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+  </ItemGroup>
 </Project>
