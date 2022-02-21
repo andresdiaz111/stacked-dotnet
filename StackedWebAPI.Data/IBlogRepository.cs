@@ -23,7 +23,7 @@ namespace StackedWebAPI.Data
         Task<PaginationResult<T>> GetAll(
             int page,
             int perPage,
-            Expression<Func<T, bool>> orderByExp);
+            Expression<Func<T, bool>> whereExp);
         
         Task<T> Update(T entity);
         
