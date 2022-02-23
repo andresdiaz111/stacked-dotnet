@@ -19,6 +19,12 @@ public class ArticleController : ControllerBase
         _articleService = articleService;
     }
 
+
+    /// <summary>
+    /// Create an article given a body 
+    /// </summary>
+    /// <param name="article"></param>
+    /// <returns></returns>
     [HttpPost("/article")]
     public async Task<ActionResult> CreateArticle([FromBody] ArticleDto article)
     {
@@ -35,6 +41,11 @@ public class ArticleController : ControllerBase
         return StatusCode(201, new { id = newArticle.Data });
     }
 
+    /// <summary>
+    /// Return a article given a id
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
     [HttpGet("/article/{id}")]
     public async Task <ActionResult> GetArticle(string id)
     {
@@ -43,6 +54,11 @@ public class ArticleController : ControllerBase
             var guid = Guid.Parse(id);
             var article = await _articleService.GetById(guid);
 
+            if (article.Data == null && article.Error == null)
+            {
+                _logger.LogWarning($"Requested Article not found: {id}");
+                return NotFound("Article not found");
+            }
             if (article.Error != null)
             {
                 _logger.LogError($"Error retrieving paginated articles: {id}, {article.Error}");
@@ -58,8 +74,11 @@ public class ArticleController : ControllerBase
         }
     }
 
-
-
+    /// <summary>
+    /// Return a paginated listo articles given a query
+    /// </summary>
+    /// <param name="query"></param>
+    /// <returns></returns>
     [HttpGet("/article")]
     public async Task<ActionResult> GetPaginatedArticles([FromQuery] ManyArticlesRequest query)
     {
